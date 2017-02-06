@@ -17,9 +17,9 @@ return [
     // 数据库名
     'database'       => '',
     // 用户名
-    'username'       => 'root',
+    'username'       => '',
     // 密码
-    'password'       => 'php@2016',
+    'password'       => '',
     // 端口
     'hostport'       => '',
     // 连接dsn
