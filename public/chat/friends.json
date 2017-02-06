@@ -1,0 +1,8 @@
+{ "C": [
+    { "id": "0", "name":"陈XXX", "img": "/public/chat/img/user2.jpg","tag":"标签","remark":"XX","address":"地址" }
+  ],
+  "D": [
+    { "id": "1", "name":"德XX", "img": "/public/chat/img/user3.jpg","tag":"标签","remark":"XX","address":"地址" },
+    { "id": "2", "name":"地XX", "img": "/public/chat/img/user4.jpg","tag":"标签","remark":"XX","address":"地址" }
+  ]
+}

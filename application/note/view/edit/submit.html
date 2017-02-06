@@ -1,0 +1,20 @@
+<div class="entry-content-list">
+{volist name="list" id="vo"}
+        <div data-time="{$vo.time}" data-id="{$vo.id}" class="table-content">
+            <span class="content-color"></span>
+               <span class="content-left">
+                   <span class="week">星期六</span>
+                   <span class="day">16</span>
+                   <span class="time">10:25 AM</span>
+               </span>
+               <span class="content-right">
+                   <span class="title">{$vo.title}</span>
+                   <span class="text">{$vo.content}</span>
+                   <span class="attributes">
+                       <span class="attributes-folder fa fa-folder">{$vo.folder}</span>
+                       <span class="attributes-tag fa fa-tag">{$vo.label}</span>
+                   </span>
+               </span>
+        </div>
+ {/volist}
+</div>

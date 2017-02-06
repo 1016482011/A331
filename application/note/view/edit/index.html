@@ -1,0 +1,58 @@
+<div class="container edit">
+    <!--时间-->
+    <div class="edit-time">
+        <span class="fa fa-clock-o fa-lg"></span>
+        <span class="edit-select"></span>
+
+       <span class="time-move">
+           <span class="time-pre"><i class="fa fa-arrow-circle-left"></i>上一篇</span>
+           <span class="time-line">|</span>
+           <span class="time-next"><i class="fa fa-arrow-circle-right"></i>下一篇</span>
+       </span>
+    </div>
+    <!--表单-->
+    <form role="form" id="editForm">
+        <div class="form-group">
+            <input type="text" class="form-control edit-title" name="editTitle" placeholder="标题">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control edit-text" name="editText" placeholder="输入文本" autocomplete="off" maxlength="20000" rows="10" style="height: 250px;"></textarea>
+        </div>
+        <div class="text-count">
+            <div>
+                总字数：<span class="count-char">0</span>
+            </div>
+        </div>
+        <!--附加选项-->
+        <div class="edit-folder">
+            <span class="folder-label"><i class="fa fa-folder fa-lg"></i>目录:</span>
+            <select id="editFolder" class="form-control" name="editFolder" autocomplete="off">
+                <option value="无目录">无目录</option>
+                {volist name="folder" id="vo"}
+                    <option data-id="{$vo.id}" value="{$vo.content}">{$vo.content}</option>
+                {/volist}
+            </select>
+        </div>
+        <div class="edit-tag">
+            <span class="fa fa-tag fa-lg">标签:</span>
+            <span class="edit-tag-select"></span>
+            <i class="fa fa-plus-square fa-lg"></i>
+
+        </div>
+        <div class="edit-location">
+            <span class="location-label"><i class="fa fa-folder fa-lg"></i>地址:</span>
+            <select id="editLocation" class="form-control" name="editLocation" autocomplete="off">
+                <option value="无地址">无地址</option>
+                {volist name="location" id="vo"}
+                  <option data-id="{$vo.id}" value="{$vo.content}">{$vo.content}</option>
+                {/volist}
+            </select>
+        </div>
+        <div class="edit-photo">
+            <span><i class="fa fa-photo fa-lg"></i>照片:</span>
+            <input id="fileInput" type="file" multiple="" accept="image/*" name="files[]" style="display: none;">
+            <label class="photo-label" for="fileInput">选择上传的图片</label>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="/public/note/js/edit/edit.js"></script>

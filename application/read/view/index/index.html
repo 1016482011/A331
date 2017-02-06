@@ -1,0 +1,50 @@
+{extend name="public:base" /}
+{block name="title"}详情页{/block}
+{block name="style"}
+<link rel="stylesheet" type="text/css" href="/public/read/css/index.css" />
+<script type="text/javascript" src="/public/read/js/index.js"></script>
+{/block}
+{block name="main"}
+    <!--*********************************顶部标题***************************-->
+    <div class="index-top">
+        <div class="index-top-title"><i class="fa fa-bars fa-fw"></i>A331资料一览</div>
+    </div>
+
+    <div class="ns-flex">
+        <!--*********************************导航栏***************************-->
+        <div class="index-nav">
+            <ul class="index-nav-tab">
+                <li><i class="fa fa-bars fa-fw"></i>目录</li><li></li><li></li>
+            </ul>
+
+            <ul class="index-nav-body">
+                {volist name="nav" id="list"}<a href="{$navUrl}/{$list.dataId}" data-id="{$list.dataId}" data-cap="{$list.dataCap}">{$list.list}</a>{/volist}
+            </ul>
+
+            <div class="index-nav-foot">
+                <p><a href="{$index}">A331</a><span class="ns-unSelect">个人发布</span></p>
+            </div>
+        </div>
+        <!--*********************************内容区***************************-->
+        <div class="index-content">
+            <div class="fa-stack index-foldArrow">
+                <i class="fa fa-circle fa-stack-2x index-outFa"></i>
+                <i class="fa fa-angle-left fa-stack-1x fa-inverse index-innerFa"></i>
+            </div>
+            <div class="index-content-body">
+
+            </div>
+            <div class="index-content-page ns-relative">
+                <span class="index-content-page1">
+                    上一页:
+                    <a href=""></a>
+                </span>
+                <span class="index-content-page2">
+                    下一页:
+                    <a href=""></a>
+                </span>
+            </div>
+        </div>
+
+    </div>
+{/block}

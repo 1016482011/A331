@@ -1,0 +1,18 @@
+html {font-size: 20px;}
+
+a {text-decoration: none;}
+
+.ns-fixed {position: fixed;}
+.ns-relative {position: relative;}
+
+.ns-container {width: 960px;margin: 0 auto;}
+
+/**阻止用户选择文字**/
+.ns-unSelect{-moz-user-select:-moz-none;-webkit-user-select:none;}
+
+/**新版弹性盒**/
+.ns-flex{display: flex;width:100%;}
+
+/**垂直居中**/
+.ns-vertical-p{display: table;}
+.ns-vertical-c{display: table-cell;vertical-align: middle;text-align: center;}

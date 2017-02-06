@@ -1,0 +1,12 @@
+[
+  {
+    "id":"0",
+    "name":"陈XX",
+    "img":"/public/chat/img/user2.jpg"
+  },
+  {
+    "id":"1",
+    "name":"德XX",
+    "img":"/public/chat/img/user3.jpg"
+  }
+]

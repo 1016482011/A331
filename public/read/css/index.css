@@ -1,0 +1,40 @@
+body{overflow: hidden;}
+
+.index-top {height: 39px;width: 100%;border-bottom: 1px solid #DDDDDD;}
+.index-top-title{font-size: 1.1rem;padding: 6px 0 0 20px;cursor: default;}
+.index-top-title > .fa-bars {display: none;margin-right: 10px;}
+
+.index-nav {width: 300px;border-right:1px solid #DDDDDD;position: relative;background: #FAFAFA;z-index: 9;}
+.index-nav-tab {display:-webkit-flex;display:flex;border-bottom: 1px solid #DDDDDD;width:100%;color: #909090;height:33px;font-size: 0.75rem;cursor: pointer;margin:0;padding:0;list-style:none;}
+.index-nav-tab > li {flex: 1;text-align: center;margin-top: 7px;}
+.index-nav-body {width: 100%;overflow-y: auto;overflow-x:hidden;margin: 0;padding: 0;cursor: pointer;font-size: 0.7rem;-moz-user-select:-moz-none;-webkit-user-select:none;}
+.index-nav-body a{color: #080808;}
+.index-nav-body ul {list-style: none;}
+.index-nav-list-hide {display: none;}
+.index-nav-body>li>div {padding: 5px 0 5px 5px;}
+.index-nav-body>li>div:hover{ background-color: #E5E5E5;}
+.index-nav-body>li>ul {margin: 0;padding: 0;}
+.index-nav-body>li>ul>li>a{width: 100%;display: inline-block;padding: 5px 0 5px 40px;}
+.index-nav-body>li>ul>li:hover {background-color: #E5E5E5;}
+.index-nav-active {background-color: #E5E5E5;}
+
+.index-nav-foot{position: absolute;bottom: 0;border-top: 1px solid #CCCCCC;font-size:12px;height: 23px;padding-bottom:10px;cursor: default;width: 100%;}
+.index-nav-foot>p{text-align: center;}
+.index-nav-foot>p>a{color: #4C7BC9;}
+
+.index-content{width: 100%;overflow-y: auto;position: relative;}
+.index-content-body {width: 80%;margin: 0 auto;}
+
+.index-content-page{width: 80%;margin: 0 auto;color: #999999;font-size: 0.9rem;}
+.index-content-page2{float: right;}
+
+.index-foldArrow {top: 45%;left: -20px;cursor: pointer;position: absolute;}
+.index-outFa {color:#5CB85C;clip: rect(0 auto auto 18px);}
+.index-innerFa {margin-left: 5px;bottom: 2px;}
+
+@media all and (max-width:768px){
+    .index-top-title > .fa-bars{display: inline;}
+    .index-nav,.index-foldArrow {display: none;}
+    .index-content-body {width: 90%;}
+}
+

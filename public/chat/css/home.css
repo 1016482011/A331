@@ -1,0 +1,192 @@
+html {font-size: 20px;font-family: Helvetica Neue,Helvetica,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;}
+a {-moz-user-select: none;-khtml-user-select: none;user-select: none;}
+ul {-moz-user-select: none;-khtml-user-select: none;user-select: none;list-style: none;margin: 0;padding: 0;}
+/*****webkit下的滚动条******/
+.chat-box::-webkit-scrollbar,.chat-content-talk-input > textarea::-webkit-scrollbar{width: 8px;height: 8px;;background-color: #E2E2E2;}
+.chat-box::-webkit-scrollbar-thumb,.chat-content-talk-input > textarea::-webkit-scrollbar-thumb{-webkit-border-radius: 3px;border-radius: 3px;background: #A1A1A1;}
+
+#chatLaunch .chat-modal-body::-webkit-scrollbar{width: 8px;background-color: #E2E2E2;}
+#chatLaunch .chat-modal-body::-webkit-scrollbar-thumb{-webkit-border-radius: 3px;border-radius: 3px;background: #A1A1A1;}
+
+.chat{background: url("../img/bg.jpg") round;width: 100%;position: fixed;}
+.chat-box {position: relative;overflow: auto;}
+
+.chat-content {top:100px;width: 100%;position: absolute;}
+.chat-content-box {width: 1000px;height: 780px;margin: 0 auto;position: relative;}
+.chat-content-left {position:absolute;width: 280px;height: 100%;background-color: #2E3238;}
+.chat-content-right {position:absolute;width: 720px;height: 100%;background-color: #EEEEEE;left: 280px;}
+
+.chat-content-header {width: 244px;height: 40px;padding: 18px;position: relative;}
+.chat-content-header-icon{display: inline-block;}
+.chat-content-header-icon > img{width: 40px;height: 40px;margin-right: 10px;}
+.chat-content-header-icon > p {display: inline-block;vertical-align: top;line-height: 0px;color: #FFFFFF;font-size: 17px;font-family:sans-serif;}
+.chat-content-header-more {color: #777777;position: absolute;right: 20px;top: 32px;display: inline-block;font-size: 12px;}
+.chat-content-header-more .fa-sort-down{font-size: 10px;vertical-align: top;padding-left: 4px;}
+
+/*****搜索输入框****/
+.chat-content-search{width: 100%;height: 35px;position: relative;}
+.chat-content-search>span {position:absolute;left: 18px;color: #8B8D90;padding: 7px 10px 7px 10px;background-color: #26292E;font-size: 18px;border-radius: 4px 0 0 4px;}
+.chat-content-search>input{position:absolute;left:53px;color: #F4F4F4;width: 209px;height: 28px;background-color: #26292E;font-size: 12px;border:1px solid #26292E;;outline:0;border-radius: 0 4px 4px 0;}
+
+/*****选项卡****/
+.chat-content-tab{display:flex;display:-webkit-flex;width: 100%;border-bottom: 1px solid #24272C;list-style: none;margin: 0;padding: 0;}
+.chat-content-tab > li{-webkit-flex:1;flex:1;text-align: center;padding: 8px 0 13px 0;position: relative;cursor: pointer;}
+.chat-content-tab > li {color: #FFFFFF;font-size: 16px;}
+.chat-content-tab > li>i {position: absolute;right:0px;top: 8px;width: 1px;height: 20px;border-right: 1px solid #24272C;cursor: pointer;}
+.chat-content-tab-active>span {color: #3CAF36;}
+.chat-content-tab .fa-user {font-size: 25px}
+
+/*****聊天中的好友******/
+.chat-content-tab-ctrl{height: 629px;overflow: hidden;position: relative;}
+.chat-content-reader{width: 100%;}
+.chat-content-reader-box {display:flex;display:-webkit-flex;height: 40px;padding: 12px;cursor: pointer;width: 254px;}
+.chat-content-reader-box{border-bottom: 1px solid #26292E;}
+.chat-content-reader-icon {display: inline-block;width: 50px;}
+.chat-content-reader-icon>img{width: 40px;height: 40px;}
+.chat-content-reader-info {-webkit-flex:1;flex:1;font-size: 13px;position: relative;color: #F5F5F5;}
+.chat-content-reader-name{position: absolute;bottom: 22px;}
+.chat-content-reader-message {position: absolute;bottom: 2px;color: #989898;}
+.chat-content-reader-time {position: absolute;bottom: 22px;right: 2px;}
+.chat-content-reader-active {background-color: #3A3F45;}
+.chat-content-hide {display: none;}
+
+.chat-content-reader-group img{width: 18px;height: 18px;}
+
+/*****好友******/
+.chat-content-friends-box {position: relative;width: 100%;background-color: #292D32;overflow: hidden;}
+.chat-content-friends {color: #F5F5F5;}
+.chat-content-friends-scope {color: #787B87;height: 20px;width: 270px;padding: 5px 0 0 10px;font-size: 15px;}
+.chat-content-friends-info {width: 260px;height: 30px;padding: 10px;background-color: #2e3238;border-bottom: 1px solid #292D32;}
+.chat-content-friends-icon {width: 30px;display: inline-block;}
+.chat-content-friends-icon >img{width: 30px;height: 30px;}
+.chat-content-friends-name {display: inline-block;}
+.chat-content-friends-name > span {vertical-align: 10px;font-size: 12px;}
+.chat-content-friends-active {background-color: #3B4047;}
+
+/*****右侧聊天框******/
+.chat-content-talk-head {height: 50px;padding: 0 19px;position: relative;}
+.chat-content-talk-headBox {width: 100%;height:50px;border-bottom: 1px solid #D6D6D6;}
+.chat-content-talk-headName {text-align: center;padding-top: 15px;font-size: 14px;}
+
+.chat-content-talk-body {padding: 0 19px;position: relative;overflow: hidden;}
+.chat-content-talk-none {color: #D1D1D1;text-align: center;margin-top: 150px;}
+.chat-content-talk-hide {display: none;}
+.chat-content-talk-time {position: relative;width: 100%;height: 36px;padding: 12px 0 0 0;}
+.chat-content-talk-time >div {padding-top:3px;width: 67px;font-weight: 700;height: 19px;color: #FFFFFF;text-align: center;background-color: #DCDCDC;font-size: 13px;margin: 0 auto;border-radius: 4px;}
+.chat-content-talk-text {width: 100%;min-height: 40px;position: relative;margin-bottom: 20px;}
+.chat-content-talk-pic > img {width: 40px;height: 40px;}
+.chat-content-talk-word {background-color: #B2E281;padding: 0 15px;border-radius: 4px;min-height: 40px;word-wrap:break-word;word-break:break-all;}
+.chat-content-talk-word > p {line-height: 20px;font-size: 13px;}
+
+.chat-content-height {line-height: 20px;font-size: 13px;width: 500px;word-wrap:break-word;word-break:break-all;display: none;}
+
+.chat-content-talk-self > .chat-content-talk-word:after{content:"";position:absolute;top:10px;right:-15px;border-width:10px;border-style:solid;border-radius: 5px;border-color:transparent transparent transparent #B2E281;}
+.chat-content-talk-self > .chat-content-talk-pic {position: absolute;right: 0;}
+.chat-content-talk-self >.chat-content-talk-word {position: absolute;max-width: 500px;right: 50px;}
+
+.chat-content-talk-other > .chat-content-talk-pic {position: absolute;left: 0;}
+.chat-content-talk-other  >.chat-content-talk-word {position: absolute;max-width: 500px;left: 50px;}
+.chat-content-talk-other > .chat-content-talk-word:after {content:"";position:absolute;top:10px;left:-15px;border-width:10px;border-style:solid;border-radius: 5px;border-color:transparent #B2E281 transparent transparent;}
+
+.chat-content-talk-input {width: 700px;height: 180px;position: absolute;bottom: 0;border-top: 1px solid #D6D6D6;}
+.chat-content-talk-input > textarea {border: none;outline: none;resize: none;width: 680px;height: 84px;margin: 30px 0 0 20px;font-size: 14px;background-color: #EEEEEE;}
+.chat-content-talk-send {width: 700px;height: 30px;position: relative;}
+.chat-content-talk-send>span{position: absolute;right: 100px;font-size: 12px;color: #888888;top: 12px}
+.chat-content-talk-send>a{padding-top:6px;text-align: center;position: absolute;right: 0;font-size: 14px;width: 90px;height: 24px;background-color: #FFFFFF;border: 1px solid #C1C1C1;border-radius: 5px;cursor: pointer;}
+.chat-content-talk-send>a:hover {background-color: #F8F8F8;}
+
+/******个人信息页*******/
+.chat-content-info-head {height: 50px;padding: 0 19px;position: relative;}
+.chat-content-info-headBox {width: 100%;height:50px;border-bottom: 1px solid #D6D6D6;}
+.chat-content-info-headName {text-align: center;padding-top: 15px;font-size: 14px;}
+
+.chat-content-info-body {padding: 0 19px;position: relative;height: 500px;}
+.chat-content-info-none {color: #D1D1D1;text-align: center;margin-top: 50px;font-size:100px;}
+.chat-content-info-hide {display: none;}
+.chat-content-info-icon {width: 100px;height: 100px;margin: 80px auto 30px auto;}
+.chat-content-info-icon > img {height: 100px;width: 100px;border-radius: 4px;}
+.chat-content-info-name{text-align: center;margin-bottom: 15px;position: relative;}
+.chat-content-info-name > span {font-weight: 600;}
+.chat-content-info-more {cursor: pointer;}
+.chat-content-info-tag {text-align: center;font-size: 12px;color: #888;}
+.chat-content-info-box {font-size: 12px;width: 410px;height: 40px;color: #888;margin: 30px auto;}
+.chat-content-info-box > div {margin: 10px 0 10px 150px;}
+.chat-content-info-remark>div {display: none;}
+.chat-content-info-remark input {border: none;background-color: #EEEEEE;outline: none;}
+.chat-content-info-message {text-align: center;cursor: pointer;}
+.chat-content-info-message > a {padding: 12px 82px;border-radius: 4px;font-size: 14px;background-color: #42AC3E;color: #FFFFFF;}
+
+footer {color: #E0E3E1;position: absolute;bottom: 25px;font-size: 12px;z-index: 9;width: 100%;}
+footer>p{text-align: center;}
+
+/******右键操作样式*******/
+.chat-right-click {position: absolute;z-index: 9;background-color: #FFFFFF;width: 120px;border-radius: 3px;display: none;}
+.chat-right-click > ul {font-size: 14px;cursor: pointer;}
+.chat-right-click > ul > li {padding: 10px;}
+.chat-right-click > ul > li:hover {background-color: #F5F5F5;}
+
+.chat-clear {box-shadow:3px 5px 3px 4px rgba(214,214,214,.5);}
+.chat-delete li:not(:first-child){border-top: 1px solid #F1F1F1;}
+
+/******下拉菜单*******/
+.chat-drop-down {position: absolute;z-index: 10;}
+.chat-drop-down li:not(:first-child){border-top: 1px solid #F1F1F1;}
+.chat-drop-down > ul {font-size: 14px;cursor: pointer;width: 150px;background-color: #FFFFFF;border-radius: 3px;}
+.chat-drop-down > ul > li {padding: 15px;}
+.chat-drop-down > ul > li:hover {background-color: #F5F5F5;}
+
+.chat-content-info-modify {top: 30px;left: 225px;display: none;}
+.chat-content-header-fn {color: #000000;top: 30px;right: 0px;display: none;}
+.chat-content-header-fn i {color: #8D8D8D;font-size: 16px;padding-right: 12px;}
+
+/******模态框样式*******/
+.chat-modal {position: absolute;width: 100%;height:100%;z-index: 20;overflow: auto;display: none;}
+.chat-modal-mask {position:absolute;width: 100%;height: 100%;background-color: #000000;opacity: 0.4;}
+.chat-modal-box {position: absolute;width: 100%;z-index: 21;opacity: 0;}
+.chat-modal-content {width: 500px;margin: 0 auto;background-color: #FFFFFF;border: 1px solid #4B3D29;box-shadow: 3px 5px 10px 3px #626262;border-radius: 4px;}
+.chat-modal-head{position: relative;padding: 15px;margin: 0;font-family: sans-serif;border-bottom: 1px solid #E5E5E5;}
+.chat-modal-head > h4 {margin: 0;color: #333333;font-size: 16px;font-weight: 500;}
+.chat-modal-head > span {position: absolute;right: 15px;font-size: 20px;top: 15px;color: #CCCCCC;cursor: pointer;}
+.chat-modal-head > span:hover {color: #808080;}
+.chat-modal-body {width: 100%;height:180px;border-bottom: 1px solid #E5E5E5;font-family: sans-serif;}
+.chat-modal-foot {padding: 18px 15px 0 15px;height: 50px;}
+.chat-modal-foot >a {font-size: 14px;border: 1px solid #EEEEEE;border-radius: 3px;padding: 8px 20px;color: #333333;cursor: pointer;float: right;margin-left: 20px;}
+.chat-modal-foot >a:hover {background-color: #E6E6E6;}
+
+#chatAdd .chat-modal-body {height: 80px;}
+#chatAdd .chat-modal-body > div {width: 400px;margin-top: 35px;margin-left: 20px;}
+#addAccount {width: 100%;font-size: 14px;padding: 8px;border: 1px solid #CCCCCC;border-radius: 3px;}
+
+#chatLaunch .chat-modal-body {height: 450px;overflow-y: auto;overflow-x: hidden;}
+#chatLaunch .chat-modal-foot > .chat-modal-close{display: none;}
+#chatLaunch .chat-modal-foot-save {width: 100px;margin-right: 175px;text-align: center;font-size: 15px;}
+#chatLaunch .chat-modal-foot-save:hover{background-color: #FFFFFF;}
+#chatLaunch .chat-modal-foot-active {color: #FFFFFF;}
+#chatLaunch .chat-modal-foot-active{background-color: #3CAF36;}
+#chatLaunch .chat-modal-foot-active:hover{background-color: #3CAF36;}
+.chat-launch-body-head {padding: 8px 20px;}
+.chat-launch-body-head img {width: 40px;height: 40px;margin-right: 10px;}
+.chat-launch-body-box {padding: 0px 20px;}
+.chat-launch-body-box div{padding: 10px 20px 6px 20px;border-bottom: 1px solid #E5E5E5;cursor: pointer;}
+.chat-launch-body-box div >i {font-size: 25px;vertical-align: 10px;margin-right: 10px;}
+.chat-launch-body-box .fa-circle-thin {color: #E9E8E8;}
+.chat-launch-body-box .fa-check-circle {color: #35B12C;}
+.chat-launch-select {background-color: #EFEFEF;}
+.chat-launch-body-box div> img {width: 40px;height: 40px;}
+.chat-launch-body-box div> span {font-size: 16px;vertical-align: top;}
+
+#chatEdit .chat-modal-body > div {width: 450px;padding: 10px 25px;}
+#chatEdit .chat-modal-body > div:first-child {padding-top: 15px;}
+#chatEdit .chat-modal-body > div >label {font-size: 16px;}
+#chatEdit .chat-modal-body > div >input {font-size: 14px;padding: 8px 5px;width: 350px;border: 1px solid #CCCCCC;border-radius: 3px;}
+
+/******滚动条********/
+.chat-content-reader-scroll{position: absolute;width: 8px;background-color: #9A9C9D;right: 0;top: 0;cursor: default;border-radius: 5px;opacity: 0.7;display: none;z-index: 99;}
+.chat-content-reader-scroll .scroll-block {background-color: #595B60;width: 8px;border-radius: 5px;}
+
+.chat-content-friends-scroll{position: absolute;width: 8px;background-color: #9A9C9D;right: 0;top:0;cursor: default;border-radius: 5px;opacity: 0.7;z-index: 99;display: none;}
+.chat-content-friends-scroll .scroll-block {background-color: #595B60;width: 8px;border-radius: 5px;}
+
+.chat-content-talk-scroll{position: absolute;width: 8px;background-color: #EEEEEE;cursor: default;right:0;top:0;border-radius: 5px;opacity: 1;z-index: 99;display: none;}
+.chat-content-talk-scroll .scroll-block {background-color: #C7C8C8;width: 8px;border-radius: 5px;}
+

@@ -1,0 +1,208 @@
+{extend name="public:base" /}
+{block name="title"}多用记事本{/block}
+{block name="style"}
+<link rel="stylesheet" type="text/css" href="/public/note/css/layout-pc.css" />
+<link rel="stylesheet" type="text/css" href="/public/note/css/edit.css" />
+{/block}
+{block name="main"}
+<div class="position-fixed">
+    <div class="position-relative">
+        <!--顶部开始-->
+        <div class="layout-top">
+            <div class="position-relative">
+                <div class="top-logo">
+                    <img src="/public/note/img/logo.png" alt="logo" />
+                </div>
+
+                <div class="top-left">
+                </div>
+
+                <div class="top-right">
+                    <span class="fa fa-angle-left fa-lg top-angle"></span>
+                    <span class="fa fa-angle-right fa-lg top-angle"></span>
+                    <span class="fa fa-plus fa-lg top-plus"><b>新增记事</b></span>
+                    <span class="fa fa-ellipsis-v fa-lg top-v"></span>
+                </div>
+            </div>
+        </div>
+        <!--顶部结束-->
+
+        <!--左侧悬浮窗-->
+        <div class="float-window">
+            <div class="user-mask"></div>
+            <div class="left-user"></div>
+            <div class="user-home">
+                <span class="fa fa-home user-home-icon"></span>
+            </div>
+            <div class="user-name">m15151837009@163.com</div>
+            <span class="fa fa-gears user-name-icon"></span>
+        </div>
+        <!--左侧开始-->
+        <div class="scroll-module">
+
+        </div>
+        <div class="layout-left">
+            <div class="position-relative">
+                <!--左侧上部背景图片内容-->
+                <div class="left-img">
+                    <div class="position-relative">
+                        <div class="img-mask"></div>
+                        <span class="fa-stack fa-lg img-stack">
+                          <i class="fa fa-circle fa-stack-2x img-stack-circle"></i>
+                          <i class="fa fa-user fa-stack-1x fa-inverse img-stack-user"></i>
+                        </span>
+                        <div class="img-bottom">
+                            <label class="bottom-total">合计: <i class="fa fa-pencil"></i><span>0</span></label>
+                            <label class="bottom-today">今日: <i class="fa fa-pencil"></i><span>0</span></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--搜索栏-->
+            <div class="left-search">
+                <span class="fa fa-search fa-lg search-icon"></span>
+                <input type="search" class="search-input" placeholder="搜索">
+                <span class="fa-stack search-cancel">
+                    <i class="fa fa-times"></i>
+                </span>
+            </div>
+            <!--日历-->
+            <div class="left-calendar">
+                <div class="calendar-title">
+                    <span class="fa fa-calendar-minus-o fa-lg"></span>
+                    <div class="calendar-flex">
+                        <div class="position-relative">
+                            <i class="fa fa-angle-down fa-lg"></i>
+                            <span>日期</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-show">
+                    <div class="calendar-relative">
+                        <span class="table-today">今日</span>
+                        <span class="fa fa-caret-left fa-lg table-left"></span>
+                        <span class="fa fa-caret-right fa-lg table-right"></span>
+                    </div>
+                </div>
+            </div>
+            <!--文件式目录-->
+            <div class="left-folder">
+                <div class="title-common">
+                    <span class="fa fa-folder fa-lg icon-common"></span>
+                    <span class="line-common">|</span>
+                    <div class="flex-common">
+                        <div class="position-relative">
+                            <span class="text-common"><i class="fa fa-angle-down fa-lg"></i>目录</span>
+                            <span class="line-common line-mid">|</span>
+                            <span class="fa fa-plus fa-lg plus-common"></span>
+                            <span class="line-common line-right">|</span>
+                            <span class="fa fa-ellipsis-v fa-lg v-common"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="folder-content">
+                    {volist name="folder" id="vo"}
+                        <div data-id="{$vo.id}">{$vo.content}
+                            <span class="folder-number"><span>0</span><i class="fa fa-ellipsis-v"></i></span>
+                        </div>
+                    {/volist}
+                    <div class="folder-none">无目录
+                        <span class="folder-number">0</span>
+                    </div>
+                </div>
+            </div>
+            <!--标签-->
+            <div class="left-tag">
+                <div class="title-common">
+                    <span class="fa fa-tag fa-lg icon-common"></span>
+                    <span class="line-common">|</span>
+                    <div class="flex-common">
+                        <div class="position-relative">
+                            <span class="text-common"><i class="fa fa-angle-down fa-lg"></i>标签</span>
+                            <span class="line-common line-mid">|</span>
+                            <span class="fa fa-plus fa-lg plus-common"></span>
+                            <span class="line-common line-right">|</span>
+                            <span class="fa fa-ellipsis-v fa-lg v-common"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tag-content">
+                    {volist name="tag" id="vo"}
+                        <div>
+                            <label class="left-unSelect">
+                                <input type="checkbox"data-id="{$vo.id}" value="{$vo.content}">
+                                {$vo.content}
+                            </label>
+                        </div>
+                    {/volist}
+                </div>
+            </div>
+            <!--地理位置-->
+            <div class="left-location">
+                <div class="title-common">
+                    <span class="fa fa-location-arrow fa-lg icon-common"></span>
+                    <span class="line-common">|</span>
+                    <div class="flex-common">
+                        <div class="position-relative">
+                            <span class="text-common"><i class="fa fa-angle-down fa-lg"></i>地址</span>
+                            <span class="line-common line-mid">|</span>
+                            <span class="fa fa-plus fa-lg plus-common"></span>
+                            <span class="line-common line-right">|</span>
+                            <span class="fa fa-ellipsis-v fa-lg v-common"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-content">
+                    {volist name="location" id="vo"}
+                    <div>
+                        <label class="left-unSelect">
+                            <input type="checkbox"data-id="{$vo.id}" value="{$vo.content}">
+                            {$vo.content}
+                        </label>
+                    </div>
+                    {/volist}
+                </div>
+            </div>
+        </div>
+        <!--左侧结束-->
+        <div class="layout-right">
+            <div class="right-title">
+                <p>列表</p>
+                <div>
+                    <i class="fa fa-pencil"></i>
+                    <span>1-2</span>
+                </div>
+            </div>
+            <div class="entry-content">
+                <div class="entry-content-list">
+                    {volist name="list" id="vo"}
+                        <div data-time="{$vo.time}" data-id="{$vo.id}" class="table-content">
+                            <span class="content-color"></span>
+                       <span class="content-left">
+                           <span class="week">星期六</span>
+                           <span class="day">16</span>
+                           <span class="time">10:25 AM</span>
+                       </span>
+                       <span class="content-right">
+                           <span class="title">{$vo.title}</span>
+                           <span class="text">{$vo.content}</span>
+                           <span class="attributes">
+                               <span class="attributes-folder fa fa-folder">{$vo.folder}</span>
+                               <span class="attributes-tag fa fa-tag">{$vo.label}</span>
+                           </span>
+                       </span>
+                        </div>
+                    {/volist}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+/*********文件顺序不能变***********/
+<script src="/public/note/js/layout.js"></script>
+<script src="/public/note/js/topIcon.js"></script>
+<script src="/public/note/js/leftSide.js"></script>
+<script src="/public/note/js/content.js"></script>
+<script src="/public/note/js/lib/scroll.js"></script>
+{/block}

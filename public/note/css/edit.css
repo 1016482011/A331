@@ -1,0 +1,42 @@
+.edit{border: 2px solid #DDDDDD;font-size: 17px;margin-top: 25px;background-color: #ffffff;padding: 20px;}
+.edit-time{color:#9D9D9D;cursor: pointer;}
+.edit .fa-clock-o{font-size: 30px;}
+.time-move{float: right;}
+.time-move i {font-size: 20px;margin-right: 2px;}
+.time-line{font-size: 25px;color: #EEEEEE;}
+.time-pre{margin-right: 20px;}
+.time-next{margin-left: 20px;}
+.edit-title{box-shadow:none;border-style: none none solid none;border-bottom-color: #EEEEEE;font-weight: 800;padding: 4px;font-size: 15px;}
+.edit-title:focus{border-style: none;}
+.edit-text{padding: 4px;line-height: 25px;font-size:12px;box-shadow: none;border-style: none;resize: vertical;overflow: hidden;background:url("../img/text-bg.png") repeat 0 1px;}
+.text-count {background-color: #F7F7F7;height: 40px;width: 100%;border-radius: 2px;font-size: 15px;}
+.text-count > div {float: right;padding: 12px;font-size: 13px;color: #6D6D6D;}
+.edit-folder{color: #999999;margin: 25px 0px;font-size: 15px;}
+.folder-label{margin-right: 15px;cursor: default;}
+.edit-folder #editFolder,.edit-location #editLocation{box-shadow: none;border-color:#EEEEEE;width: 225px;height: 30px;display: inline-block;background-color: #F7F7F7;font-size: 12px;padding: 2px 5px;border-radius: 2px;}
+.edit-tag{color: #999999;margin: 20px 0px;font-size: 13px;cursor: pointer;}
+.edit-tag .edit-tag-select {margin-left: 12px;}
+.edit-tag .edit-tag-select > div{display: inline-block;border: 1px solid #2e3436;margin-right: 10px;}
+.edit-tag .edit-tag-select > div span {margin-left: 5px;}
+.edit-tag .edit-tag-select > div i {margin-right: 5px;}
+.edit-tag .fa-plus-square:hover {color: #87C82A;}
+.edit-tag .fa-close:hover {color: #930000;}
+.edit-location{color: #999999;margin: 20px 0px;font-size: 15px;}
+.edit-location #editLocation{margin-left: 14px;}
+.edit-photo{color: #999999;margin: 25px 0px;font-size: 15px;cursor: default;}
+.edit-photo span {margin-right: 12px;}
+.edit-photo span i {font-size: 18px;}
+.photo-label {background-color: #F8F8F8;width: 130px;height: 30px;text-align: center;padding-top: 5px;border: 1px solid #EEEEEE;}
+.photo-label:hover {background-color: #E6E6E6;}
+.folder-label i,.edit-tag > span,.location-label i ,.edit-photo span i{padding-right: 3px;}
+
+.edit .dairo-edit-td:hover{background-color: #F1F1F1!important;}
+
+/***标签读取弹出框****/
+.edit-readTag {display: inline-block;margin: 6px;}
+.edit-tagRead>div{height: 40px;padding: 3px 5px 0;}
+.edit-tagRead>div:not(:last-child){border-bottom: 1px solid #EAEAEA;}
+.edit-tagRead label{background: url("../img/unchoose.png") no-repeat 0 8px;font-weight: 500;}
+.edit-tagRead .left-select{background: url("../img/choose.png") no-repeat 0 8px;font-weight: 500;}
+.edit-tagRead input{width: 17px;height: 17px;opacity: 0;}
+.edit-tagRead>div:hover{background-color: #F4F4F4;}
